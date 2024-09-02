@@ -18,6 +18,7 @@ def move_files(src, dst):
 source_folder = 'Top secret'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 destination_folder = 'My-server'
 =======
 destination_folder = 'Internet'
@@ -25,5 +26,8 @@ destination_folder = 'Internet'
 =======
 destination_folder = 'My-server'
 >>>>>>> e8f5322 (create:feature-2)
+=======
+destination_folder = 'My-server'
+>>>>>>> 7b7023c463265c6df919c4dabe5beb91feb8b922
 
 move_files(source_folder, destination_folder)
