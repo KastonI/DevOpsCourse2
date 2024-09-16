@@ -1,0 +1,25 @@
+    1  sudo apt update
+    2  sudo apt upgrade  
+    3  useradd --help
+    4  sudo useradd -m -p pas123 NewUser
+    5  sudo groupadd NewUser
+    6  sudo usermod -g NewUser NewUser
+    7  getent group NewUser
+    8  sudo usermod -c "Новий облiковий запис" NewUser 
+    9  groupmod -n NewGroup NewUser
+   10  sudo groupmod -n NewGroup NewUser
+   11  sudo apt install htop
+   12  sudo apt install vim
+   13  sudo apt install git
+   14  history --help
+   15  ls -la
+   16  cd /home/
+   17  cd illia/
+   18  ls -la
+   19  git clone https://github.com/KastonI/DevOpsCourse2.git
+   20  ls -la
+   21  cd DevOpsCourse2/
+   22  ls
+   23  mkdir Lecture_4/
+   24  cd Lecture_4/
+   25  history > bash_history.txt
