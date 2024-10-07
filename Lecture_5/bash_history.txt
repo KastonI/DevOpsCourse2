@@ -1,0 +1,35 @@
+    1  apt update
+    2  apt upgrade  
+    3  useradd --help
+    4  useradd -m illia
+    5  passwd illia 
+    6  usermod -aG sudo illia
+    7  usermod -c "Новий облiковий запис" illia
+    8  chsh -s /bin/bash illia
+    9  su illia
+    10  cd /home/illia
+    11  sudo apt install htop vim git
+    12  sudo ssh-keygen --help
+    13  sudo ssh-keygen -t ed25519 -C "GitHubDebianSrvIllia"
+    14  sudo cat /root/.ssh/ed25519_DebianIllia.pub
+    15  ssh -T git@github.com
+    16  sudo chmod +r /root/.ssh/ed25519_DebianIllia
+    17  ssh -T git@github.com
+    18  sudo ls -la /root/.ssh/ed25519_DebianIllia.pub
+    19  sudo chmod 770 /root/.ssh/ed25519_DebianIllia.pub
+    20  ssh -T git@github.com
+    21  cp /root/.ssh/ed25519_DebianIlli* /home/illia/.ssh
+    22  ls -la ~/.ssh
+    23  ssh -T git@github.com
+    24  ssh-agent --help
+    25  ssh-add /home/illia/.ssh/ed25519_DebianIllia
+    26  eval "$(ssh-agent -s)"
+    27  ssh-add /home/illia/.ssh/ed25519_DebianIllia
+    28  sudo ssh -T git@github.com
+    29  git config --global user.name "Illia Savchenko"
+    30  git config --global user.email "ilas70587@gmail.com"
+    31  git clone git@github.com:KastonI/DevOpsCourse2.git
+    32  sudo git clone git@github.com:KastonI/DevOpsCourse2.git
+    33  cd DevOpsCourse2/
+    34  git branch lecture5
+    35  history > bash_history.txt
