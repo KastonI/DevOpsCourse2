@@ -12,7 +12,7 @@ USE SchoolDB;
 ### Таблиця Institutions: Створіть таблицю Institutions
 
 При створеннi таблицi **Institutions**, я використав наступнi типи данних.
-- **INT AUTO_INCREMENT** - для генерацiї iдентифiкаторiв
+- **INT AUTO_INCREMENT** - для автоматичної генерацiї iдентифiкаторiв
 - **VARCHAR()** -  для звичайних текстових полiв
 - **ENUM()** - щоб обмежити можливі значення, i забезпечити цiлiстнiсть даних.
 
@@ -66,6 +66,11 @@ last_name VARCHAR(50) NOT NULL,
 child_id INT,
 FOREIGN KEY (child_id) REFERENCES children(child_id) 
 ```
+
+Пiсля створення таблиць в мене вийшла база данних з наступною структурою:
+
+![image](https://github.com/user-attachments/assets/a09d3fd4-86f3-45c1-a7e7-3a9542a7ea58)
+
 ### Операції з даними: Вставте принаймні 3 записи
 
 Зроблено) 
@@ -80,7 +85,7 @@ FOREIGN KEY (child_id) REFERENCES children(child_id)
 Вона розгорнулася без проблем
 ## Запити:
 
-Для першого завдання я використав цей запит
+Для першого завдання я використав цей запит.
 
 	select child_id,first_name,last_name,institution_name,institutions_direction
 	from children 
@@ -97,7 +102,7 @@ FOREIGN KEY (child_id) REFERENCES children(child_id)
 	from children
 	join parents ON children.child_id = parents.child_id;
 
-
+Пiд час написанная цього запиту зiштовхнувся з проблемою те що iмена дiтей i батькiв мають однаковi iдентифiкатори i треба було використати алiас `AS`, щоб створити псевдонiм для стовбця `parents.first_name` i `parents.last_name`.
 ![Pasted image 20241015213237](https://github.com/user-attachments/assets/c457e164-5510-4f94-81eb-e41a23046069)
 
 Для запиту `Отримайте список всіх закладів з адресами та кількістю дітей, які навчаються в кожному закладі` я використав наступний sql-запит.
@@ -107,13 +112,14 @@ FOREIGN KEY (child_id) REFERENCES children(child_id)
 	JOIN children ON institutions.institution_id = children.institution_id
 	GROUP BY institutions.institution_name, institutions.address\G;
 
+A тут для того щоб порахувати кiлькiсть учнiв я використав функцiю `COUNT()`. А для групування sql оператор `GROUP BY`
 
 ![Pasted image 20241015214414](https://github.com/user-attachments/assets/3692238b-ed40-4621-8dba-addacc98e937)
 
 ## Зробіть бекап бази та застосуйте його для нової бази даних і перевірте
 
 За допомогою команди `mysqldump schooldb > schooldb_backup.sql` я створив бекап.
-Потiм видалив i снуючу БД `drop database schoolbd;`.
+Потiм видалив iснуючу БД `drop database schoolbd;`.
 
 Створив знову базу данних i вiдтворив її з бекапу.
 
