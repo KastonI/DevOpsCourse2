@@ -92,8 +92,6 @@ FOREIGN KEY (child_id) REFERENCES children(child_id)
 	join institutions ON children.institution_id = institutions.institution_id
 	join classes ON children.class_id = classes.class_id;
 
-![Pasted image 20241015040935](https://github.com/user-attachments/assets/cc65ecc7-09ea-4f70-bd5d-400ac4fc1e65)
-
 Для запиту `Отримайте інформацію про батьків і їхніх дітей разом із вартістю навчання`, я використав наступний sql-запит.
 
 	select children.child_id,children.first_name,children.last_name,
@@ -103,7 +101,6 @@ FOREIGN KEY (child_id) REFERENCES children(child_id)
 	join parents ON children.child_id = parents.child_id;
 
 Пiд час написанная цього запиту зiштовхнувся з проблемою те що iмена дiтей i батькiв мають однаковi iдентифiкатори i треба було використати алiас `AS`, щоб створити псевдонiм для стовбця `parents.first_name` i `parents.last_name`.
-![Pasted image 20241015213237](https://github.com/user-attachments/assets/c457e164-5510-4f94-81eb-e41a23046069)
 
 Для запиту `Отримайте список всіх закладів з адресами та кількістю дітей, які навчаються в кожному закладі` я використав наступний sql-запит.
 
@@ -113,8 +110,6 @@ FOREIGN KEY (child_id) REFERENCES children(child_id)
 	GROUP BY institutions.institution_name, institutions.address\G;
 
 A тут для того щоб порахувати кiлькiсть учнiв я використав функцiю `COUNT()`. А для групування sql оператор `GROUP BY`
-
-![Pasted image 20241015214414](https://github.com/user-attachments/assets/3692238b-ed40-4621-8dba-addacc98e937)
 
 ## Зробіть бекап бази та застосуйте його для нової бази даних і перевірте
 
@@ -139,9 +134,6 @@ A тут для того щоб порахувати кiлькiсть учнiв 
 
 У результатi вийшла занонiмiзована таблиця `children`.
 
-![Pasted image 20241015220730](https://github.com/user-attachments/assets/24d7cf46-b771-4ee8-908d-b3d377f46253)
-
-
 ### Анонімізація таблиці Parents:
 Для анонiмiзацiї полiв `first_name, last_name`, в таблицi `parents` я використав наступний sql-запит:
 
@@ -152,7 +144,6 @@ A тут для того щоб порахувати кiлькiсть учнiв 
 
 У результатi вийшла занонiмiзована таблиця `parents`.
 
-![Pasted image 20241015221912](https://github.com/user-attachments/assets/ad4cc3d4-2e03-4c37-9fa0-82524243f83d)
 ### Анонімізація таблиці Institutions:
 Для анонiмiзацiї полiв `institution_name, address`, в таблицi `institutions` я використав наступний sql-запит:
 
@@ -162,5 +153,3 @@ A тут для того щоб порахувати кiлькiсть учнiв 
 	address = CONCAT('Address', @counter);
 
 У результатi вийшла занонiмiзована таблиця `institutions`.
-
-![Pasted image 20241015222514](https://github.com/user-attachments/assets/7a8f6784-9aff-4dcb-96e6-74cc13b7623e)
