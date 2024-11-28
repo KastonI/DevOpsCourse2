@@ -109,7 +109,8 @@
 	systemctl enable data_and_time.timer
 	tail -f /var/log/date_and_time.log
 Все тепер кожну хвилину таймер додає теперiшню дату i час до файлу `/var/log/date_and_time.log`.
-![date_and_time](https://github.com/KastonI/privat/blob/master/Pasted%20image%2020240916235827.png)
+![date_and_time](https://github.com/user-attachments/assets/a5d171a7-d927-4e87-a962-ee0c27e145ce)
+
 
 ## Налаштувати брандмауер за допомогою UFW або iptables. Заборонити доступ до порту 22 (SSH) з певного IP, але дозволити з іншого IP.
 Iнсталюємо `ufw`:
@@ -160,7 +161,8 @@ Iнсталюємо `ufw`:
 ## Створити й змонтувати новий розділ на диску, налаштувати його для автоматичного монтування під час завантаження системи.
 Для цього я вставив у сервер флешку без файлової системи.
 
-![/dev/sdb](https://github.com/KastonI/privat/blob/master/Pasted%20image%2020240917110339.png)
+![/dev/sdb](https://github.com/user-attachments/assets/440b95b9-bc7f-47a7-9db6-377d6a6830b8)
+
 
 Далi створюємо новий роздiл за допомогою `fdisk`
 
@@ -175,7 +177,8 @@ Iнсталюємо `ufw`:
 	mkdik /home/illia/files
 	mount /dev/sdb1 /home/illia/files	
 
-![Before reboot](https://github.com/KastonI/privat/blob/master/Pasted%20image%2020240917111629.png)
+![Before reboot](https://github.com/user-attachments/assets/3560b089-ecae-41ce-a7e1-ee61ff0315a2)
+
 
 Для того щоб цей диск автоматично прикрiплявся до цiєї папки треба прописати це при запуску системи:
 
@@ -187,7 +190,8 @@ I в цьому файлi вписуємо наступний рядок:
 
 Пiсля перезавантаження наш зроблений `maunt` залишився i працює
 
-![After reboot](https://github.com/KastonI/privat/blob/master/Pasted%20image%2020240917112558.png)
+![After reboot](https://github.com/user-attachments/assets/3aa572b0-cdca-4b93-bcdc-1014aebf72e2)
+
 
 
 
