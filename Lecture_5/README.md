@@ -19,7 +19,8 @@ Iнсталювання пакетiв:
 
 	sudo apt install htop vim git
 
-![apt_install](https://github.com/KastonI/privat/blob/master/screenshot.png)
+![apt_install](https://github.com/user-attachments/assets/0e1fd174-0c99-44ad-b788-3985daa227b0)
+
 
 ## Скопіюйте git-репозиторій у домашній директорії, створіть файл з історією команд та додайте до репозиторію. 
 
@@ -44,5 +45,6 @@ Iнсталювання пакетiв:
  - у процесах мого сервер можна знайти процес ssh, за допомогою якого я пiд'єднаний, процес `htop`, а також рiзнi системнi процеси.
 
 
-![htop](https://github.com/KastonI/privat/blob/master/image.png)
+![htop](https://github.com/user-attachments/assets/d945e003-7e8d-42d4-96b1-50e06a4bbec1)
+
  
