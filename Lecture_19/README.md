@@ -1,6 +1,8 @@
 
 # Intro to K8s
 
+>Для завдання використовувались локальнi ресурси. Усього було запущено 1 майстер i 1 воркер.
+
 **Спершу для того щоб дозволити створення подiв на мастерi використав наступну команду**
 
     kubectl taint nodes k8s-master node-role.kubernetes.io/control-plane:NoSchedule-
