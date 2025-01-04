@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: bash
+spec:
+  template:
+    spec:
+      containers:
+      - name: bash
+        image: docker.io/library/bash:5
+        command: ["bash"]
+        args:
+        - -c
+        - echo "Hello from EKS!" && echo "Job $job_uid"
+        env:
+        - name: job_uid
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.uid
+      restartPolicy: Never
