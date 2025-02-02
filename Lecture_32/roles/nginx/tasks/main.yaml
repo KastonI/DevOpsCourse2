@@ -1,0 +1,16 @@
+---
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: present
+
+- name: Deploy index.html
+  template:
+    src: templates/index.html.j2
+    dest: /var/www/html/index.html
+    mode: '0644'
+
+- name: Restart Nginx
+  service:
+    name: nginx
+    state: restarted

@@ -1,0 +1,14 @@
+---
+
+- name: Apt cache (apt update)
+  apt:
+    update_cache: yes
+
+- name: Install packages vim, git, mc, ufw, htop
+  apt:
+    name:
+      - vim
+      - git
+      - ufw
+      - htop
+    state: present
