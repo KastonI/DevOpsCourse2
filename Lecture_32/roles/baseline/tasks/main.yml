@@ -1,4 +1,9 @@
 ---
+- name: Ensure SSH keys are configured
+  authorized_key:
+    user: ubuntu
+    state: present
+    key: "{{ lookup('file', 'files/instance_test_key.pub') }}"
 
 - name: Apt cache (apt update)
   apt:

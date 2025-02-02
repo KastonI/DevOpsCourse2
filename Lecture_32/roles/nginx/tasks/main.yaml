@@ -10,6 +10,14 @@
     dest: /var/www/html/index.html
     mode: '0644'
 
+- name: Deploy default Nginx configuration file
+  copy:
+    src: files/nginx.conf
+    dest: /etc/nginx/nginx.conf
+    mode: '0644'
+    owner: root
+    group: root
+
 - name: Restart Nginx
   service:
     name: nginx

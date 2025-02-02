@@ -1,16 +1,16 @@
-- name: Configure baseline
-  hosts: all
-  become: true
-  roles:
-    - baseline
+# - name: Configure baseline
+#   hosts: all
+#   become: true
+#   roles:
+#     - baseline
 
-- name: Configure public firewall
-  hosts: all
-  become: true
-  roles:
-    - firewall
+# - name: Configure public firewall
+#   hosts: all
+#   become: true
+#   roles:
+#     - firewall
 
-- name: Configure Db instance
+- name: Configure Nginx instance
   hosts: instance__web
   become: true
   roles:
