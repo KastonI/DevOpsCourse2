@@ -7,10 +7,11 @@
 - **email**
 - **gender**
 - **name**
+- **surname**
 
 Також додав тестового юзера:
 
-![Pasted image 20250203221221](https://github.com/user-attachments/assets/f219fe3d-740d-4d78-bc86-e490dfcd038f)
+![image](https://github.com/user-attachments/assets/213faf0a-b392-444b-bdda-33637f216f8b)
 
 ---
 
