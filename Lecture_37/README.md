@@ -88,10 +88,10 @@ def send_welcome_email(email, name, surname, gender):
                 "Body": {"Text": {"Data": body_text}},
             }
         )
-        print(f"✅ Email sent successfully to {email}! Message ID: {response['MessageId']}")
+        print(f"Email sent successfully to {email}!")
         return response
     except Exception as e:
-        print(f"❌ Error sending email to {email}: {str(e)}")
+        print(f"Error sending email to {email}")
         return None
   
 def lambda_handler(event, context):    
@@ -108,11 +108,11 @@ def lambda_handler(event, context):
                 email_status = send_welcome_email(email, name, surname, gender)
   
                 if email_status:
-                    print(f"✅ Email successfully sent to {email}")
+                    print(f"Email successfully sent to {email}")
                 else:
-                    print(f"❌ Failed to send email to {email}")
+                    print(f"Failed to send email to {email}")
             else:
-                print("⚠️ Skipping record: missing email or name.")
+                print("Missing email or name.")
   
     return {"status": "success"}
 ```
