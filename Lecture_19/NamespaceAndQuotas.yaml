@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: homework
+  labels:
+    name: homework
+
+---
+
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: resource-quota
+  namespace: homework
+spec:
+  hard:
+    requests.cpu: "1"
+    requests.memory: 3Gi
+    limits.cpu: "3"
+    limits.memory: 6Gi
+    pods: "4"
